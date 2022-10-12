@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
 
     def index 
-        reviews = Review.all.order(rating: :text_body)
+        reviews = Review.all.order(rating: :textbody)
         render json: reviews, include: :recipes
     end 
     
@@ -35,7 +35,7 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        params.permit(:text_body, :rating, :user_id, :recipe_id)
+        params.permit(:textbody, :rating, :user_id, :recipe_id)
     end
 
     def render_not_found_response
