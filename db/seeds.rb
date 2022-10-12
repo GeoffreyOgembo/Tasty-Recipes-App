@@ -1,4 +1,4 @@
-puts "🌱 Seeding data..."
+
 
  recipe1 = Recipe.create(title: "Pizza", description: "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot ", ingredients: "2 ½ cups warm water · 1 teaspoon sugar · 2 teaspoons active dry yeast · 7 cups all-purpose flour, plus more for dusting ", image_url: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60", user_id: 2)  
  recipe2 = Recipe.create(title: "Milkshake", description: "A milkshake (sometimes simply called a shake) is a sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, chocolate syrup, fruit syrup, or whole fruit into a thick, sweet, cold mixture.", ingredients:"1x 2x 3x ; ⅔ cup milk ; 2 cups ice cream use chocolate ice cream for a chocolate shake ; 3 tablespoons chocolate syrup", image_url: "https://images.unsplash.com/photo-1568901839119-631418a3910d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=649&q=80", user_id: 3)  
@@ -10,10 +10,8 @@ puts "🌱 Seeding data..."
        
 
     #USER DATA
-user1 = User.create(name: "Austin", email: "austin@test.com", password_digest: "password1", user_type: 'admin')
-user2 = User.create(name: "John", email: "john@test.com", password_digest: "password2", user_type: 'member')
-user3 = User.create(name: "Rashid", email: "rashid@test.com", password_digest: "password3", user_type: 'member')
-user4 = User.create(name: "joe", email: "joe@test.com", password_digest: "password4", user_type: 'member')
-user5 = User.create(name: "gregory", email:"gregory@test.com", password_digest: "password5", user_type: 'member')
-
-    puts "🌱 Done Seeding data..."
+ user1 = User.create(name: "Austin", email: "austin@test.com", password_digest: "password1", user_type: 'admin')
+ user2 = User.create(name: "John", email: "john@test.com", password_digest: "password2", user_type: 'member')
+ user3 = User.create(name: "Rashid", email: "rashid@test.com", password_digest: "password3", user_type: 'member')
+ user4 = User.create(name: "joe", email: "joe@test.com", password_digest: "password4", user_type: 'member')
+ user5 = User.create(name: "gregory", email:"gregory@test.com", password_digest: "password5", user_type: 'member')
