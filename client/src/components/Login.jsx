@@ -1,9 +1,13 @@
+
 import React, { useState } from "react";
 import "./../../App.css";
+import React from "react";
+
 
 
 
 function Login() {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [username, setUserName] = useState("");
@@ -36,6 +40,7 @@ function Login() {
     }
 
 
+
   return (
     <div className="container">
         <div className="row justify-content-center pt-5">
@@ -58,6 +63,7 @@ function Login() {
                     />
                 </div>
                 <div className="form-group">
+
                     <label htmlFor="password" className="form-label pt-2">
                         Password
                     </label>
@@ -111,8 +117,12 @@ function Login() {
             </div>
             </div>
         </div>
+            </div>
+            </div>
+        </div>
     </div>
   )
 }
 
 export default Login;
+
