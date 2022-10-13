@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get "/users", to: "users#index"
 
 
+  # recipe routes
+  resources :recipes, only: [:create, :destroy :index]
+  get "/recipes", to: "recipes#index"
   delete "/recipes/:id", to: "recipes#destroy"
-  get "/recipes" , to: "recipes#index"
+
+
 end
