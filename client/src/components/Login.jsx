@@ -114,13 +114,11 @@ function Login() {
                         Log In
                     </button>
                 </div>
-            </div>
-            </div>
-        </div>
-            </div>
+             </div>
             </div>
         </div>
     </div>
+            
   )
 }
 

@@ -1,4 +1,5 @@
-  #USER DATA
+puts "... seeding"
+ #USER DATA
   user1 = User.create(name: "Austin", email: "austin@test.com", password_digest: "password1", user_type: 'admin')
   user2 = User.create(name: "John", email: "john@test.com", password_digest: "password2", user_type: 'member')
   user3 = User.create(name: "Rashid", email: "rashid@test.com", password_digest: "password3", user_type: 'member')
@@ -15,6 +16,7 @@
  recipe6 = Recipe.create(title: "hamburger", description: "In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide.Step 2 Lay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill.", ingredients: "1 pound ground lean (7% fat) beef1 large egg ½ cup minced onion ¼ cup fine dried bread crumbs 1 tablespoon Worcestershire 1 or 2 cloves garlic, peeled and minced About 1/2 teaspoon salt About 1/4 teaspoon pepper ",  image_url: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2005%2F06%2F22%2Fnugget-burger-su-1076692-x.jpg&w=272&h=272&c=sc&poi=face&q=60", user_id: 3)   
  recipe7 = Recipe.create(title: "Shrimo", description: "Cooking shrimp in a stir-fry is a natural fit for these juicy little crustaceans. Sautéed quickly over high heat, with a flavorful sauce and some veggies, this recipe is all but guaranteed to produce perfect shrimp every time.", ingredients: "½ cucumber (sliced ½ cup of oats1 tomato (sliced)Lettuce leaves 1", image_url: "https://images.themodernproper.com/billowy-turkey/production/posts/Shrimp-Fajitas-12.jpg?w=667&auto=compress%2Cformat&fit=crop&dm=1612803666&s=d42cc5a92e1bd7816c780404e248414a", user_id: 1)   
        
+ 
 
 
  # review data
@@ -25,7 +27,7 @@ Review.create!(rating: 4.5, textbody: 'If you want to eat a generous burger and 
 Review.create!(rating: 4.5, textbody: 'I Tried the Stir-Fried Shrimp That Everyone’s Obsessed with and It Definitely Lived Up to the Hype',user_id: 3, recipe_id: 1)
 
 
-
+puts "...done seeding"
 
 
 

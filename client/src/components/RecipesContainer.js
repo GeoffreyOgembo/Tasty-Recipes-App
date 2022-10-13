@@ -2,7 +2,7 @@ import React, {useEffect, useState}from 'react'
 // import Spinner from '../../common/spinner/Spinner'
 // import Recipes from './Recipes'
 // import NewRecipe from '../NewRecipes/NewRecipe'
-import Meal from '../Meal'
+import Meal from './Meal'
 
 
 function RecipesContainer() {

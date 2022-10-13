@@ -16,10 +16,7 @@ const Card = (props) => {
       <a href={props.data.src}><h5 className="card-header">{props.data.title}</h5></a>
       <img className="image" src={props.data.image_url} alt="alt message"></img>
       <div className="card-body">{props.data.description}
-      
-     
-        
-      
+                        
       </div>
     </div>
     </div>
@@ -46,7 +43,9 @@ function Home({title, description, ingredients, image_url, user_id}) {
   }, []);
   return (
     <div>
-    {cardData(recipes)} 
+    
+    {cardData(recipes)}
+    
       {/* <Navbar/>
       <Recipe/> */}
       {/* {recipes.map((recipes)=>(<Recipe key={recipes.id} title={recipes.title}
