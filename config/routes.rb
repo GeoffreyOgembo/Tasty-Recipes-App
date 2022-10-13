@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#show"
   get "/users", to: "users#index"
 
+  # recipe routes
+  resources :recipes, only: [:create, :destroy ]
+  get "/recipes", to: "recipes#index"
+
+
 end

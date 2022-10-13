@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
+ActiveRecord::Schema[7.0].define(version: 2022_10_12_052135) do
   create_table "recipes", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -42,10 +42,7 @@
     t.datetime "updated_at", null: false
   end
 
-
+  add_foreign_key "recipes", "users"
   add_foreign_key "reviews", "recipes"
   add_foreign_key "reviews", "users"
-
-  add_foreign_key "recipes", "users"
-
 end

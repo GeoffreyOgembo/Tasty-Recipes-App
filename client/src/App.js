@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from "react";
+import Home from './components/Navbar';
+import Recipe from './components/Recipe';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+<Home/>
+    <Recipe/>
+      {/* {recipes.map((recipes)=>(<Recipe key={recipes.id} title={recipes.title}
+       description={recipes.description} ingredients = {recipes.ingredients} 
+       image_url={recipes.image_url} user_id={recipes.user.id}> */}
+  
+  {/* </Recipe>)) } */}
     </div>
   );
 }
