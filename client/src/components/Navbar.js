@@ -24,11 +24,11 @@ function Navbar() {
                
 
                 
-                <Link className="nav-link" to='/user'>LOGIN</Link>
+                <Link className="nav-link" to='/login'>LOGIN</Link>
                
 
                 
-                <Link className='nav-link' to='/register'>SIGN UP</Link>
+                <Link className='nav-link' to='/signup'>SIGN UP</Link>
                
               </ul>
             </div> 

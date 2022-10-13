@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Recipe from './Recipe'
 import { useEffect, useState } from 'react'
+import StarRating from './StarRating'
 
 
 const Card = (props) => {
@@ -16,7 +17,8 @@ const Card = (props) => {
       <a href={props.data.src}><h5 className="card-header">{props.data.title}</h5></a>
       <img className="image" src={props.data.image_url} alt="alt message"></img>
       <div className="card-body">{props.data.description}
-                        
+
+                <StarRating/>        
       </div>
     </div>
     </div>

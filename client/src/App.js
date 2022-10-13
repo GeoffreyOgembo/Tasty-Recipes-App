@@ -1,9 +1,10 @@
 import './App.css';
-import { BrowserRouter as  Route, Routes } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Recipe from './components/Recipe';
 import RecipesContainer from './components/RecipesContainer';
 import Navbar from './components/Navbar';
+import Login from './components/Login';
 
 
 
@@ -12,8 +13,16 @@ function App() {
   return (
     <div>
     <Navbar/> 
-    <Home/>
-    <Recipe/>
+
+    <Routes>
+    <Route exact path="/" element={<Home/>}></Route>
+    <Route exact path="/recipe" element={<Recipe/>}></Route>
+    {/* <Route exact path="/reviews" element={<Reviews/>}></Route> */}
+    <Route exact path="/login" element={<Login/>}></Route>
+    {/* <Route exact path="/signup" element={<SignUp/>}></Route> */}
+   </Routes>
+       
+
     <RecipesContainer/>
 
 
