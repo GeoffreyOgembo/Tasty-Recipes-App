@@ -1,11 +1,19 @@
 
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create(name: "Luke", movie: movies.first)
+
+
 # review data
 Review.create!(rating: 4, textbody: 'I Tested the Most Popular Tuna Steak Recipes and Found the One You Must Make')
 Review.create!(rating: 5 , textbody: 'Yes, the Viral Ice Cream Sandwich Milkshake Recipe Is That Good')
 Review.create!(rating: 4.5, textbody: 'I Tried the Vegetable Rice That Everyone’s Obsessed with and It Definitely Lived Up to the Hype')
 Review.create!(rating: 4.5, textbody: 'If you want to eat a generous burger and do not want to spend so much money just go to Buddies Burger and enjoy the company of its owner, who is very kind and helpful. Thanks for everything!')
 Review.create!(rating: 4.5, textbody: 'I Tried the Stir-Fried Shrimp That Everyone’s Obsessed with and It Definitely Lived Up to the Hype')
-=======
 
 # recipe data
  recipe1 = Recipe.create(title: "Pizza", description: "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot ", ingredients: "2 ½ cups warm water · 1 teaspoon sugar · 2 teaspoons active dry yeast · 7 cups all-purpose flour, plus more for dusting ", image_url: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60", user_id: 2)  
@@ -23,3 +31,5 @@ Review.create!(rating: 4.5, textbody: 'I Tried the Stir-Fried Shrimp That Everyo
  user3 = User.create(name: "Rashid", email: "rashid@test.com", password_digest: "password3", user_type: 'member')
  user4 = User.create(name: "joe", email: "joe@test.com", password_digest: "password4", user_type: 'member')
  user5 = User.create(name: "gregory", email:"gregory@test.com", password_digest: "password5", user_type: 'member')
+ user5 = User.create(name: "gregory", email:"gregory@test.com", password_digest: "password5", user_type: 'member')
+
