@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 
 function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [username, setUserName] = useState("");
+    const [usertype, setUserType] = useState("");
+
+
+    const onChangeHandler = (e) => {
+        const val = e.target.value;
+        switch (e.target.name) {
+            case "email":
+                setEmail(val);
+                break;
+            case "password":
+                setPassword(val);
+                break;
+            case "username":
+                setUserName(val);
+                break;
+            case "usertype":
+                setUserType(val)
+                break;
+            default:
+                alert("Error");
+        }
+    };
+
+    const submitHandler = () => {
+        const userObj = {email, password, username, usertype};
+        alert(JSON.stringify(userObj));
+    }
+
+
   return (
     <div className="container">
         <div className="row justify-content-center pt-5">
@@ -23,6 +55,20 @@ function Login() {
                         id="email"
                         placeholder="myname@example.com"
                     />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password" className="form-label pt-2">
+                        Password
+                    </label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={password}
+                            onChange={onChangeHandler}
+                            className="form-control"
+                            id="password"
+                            placeholder="...."
+                        />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email" className="form-label pt-2">
