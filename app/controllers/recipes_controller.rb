@@ -25,7 +25,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     end
 
     def destroy
-        recipe = find_recipe
+        recipe = Recipe.find_by( params[:id])
         recipe.destroy
         head :no_content
     end

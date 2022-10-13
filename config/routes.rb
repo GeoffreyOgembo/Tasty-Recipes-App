@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#show"
   get "/users", to: "users#index"
 
+
+  delete "/recipes/:id", to: "recipes#destroy"
+  get "/recipes" , to: "recipes#index"
 end
