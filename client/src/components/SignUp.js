@@ -16,7 +16,7 @@ function SignUp({ setUser }) {
       },
       body: JSON.stringify({
         name,
-        
+        email,
         password,
         password_confirmation: passwordConfirmation,
       }),
@@ -30,7 +30,7 @@ function SignUp({ setUser }) {
   const submitHandler = () => {
     const userObj = {name, email, password};
     alert(JSON.stringify(userObj));
-}
+  }
 
   return (
     <div>
@@ -85,7 +85,7 @@ function SignUp({ setUser }) {
             <button 
               onClick={submitHandler}
               type="button" 
-              className="btn btn-secondary btn-block"
+              className="btn btn-primary btn-block"
             >
               Sign Up!
             </button>

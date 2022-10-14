@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 function Login({ setUser }) {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSubmit(e) {
@@ -12,7 +13,7 @@ function Login({ setUser }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, password }),
+      body: JSON.stringify({ name, email, password }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -20,15 +21,18 @@ function Login({ setUser }) {
     });
   }
 
-
+  const submitHandler = () => {
+    const userObj = {name, email, password};
+    alert(JSON.stringify(userObj));
+  }
  
 
   return (
     <div>
   
       <form className="frm1" onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label htmlFor="name">name</label>
+        <h1>Karibu Tasty Recipes!</h1>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
@@ -38,6 +42,16 @@ function Login({ setUser }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+
+        <label htmlFor="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        /><br></br>
+
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -47,7 +61,17 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        
+        <div className="form-group">
+            <button 
+              onClick={submitHandler}
+              type="button" 
+              className="btn btn-primary btn-block"
+            >
+              Log In!
+            </button>
+        </div>
+
       </form>
     </div>
    
