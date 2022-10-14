@@ -20,7 +20,7 @@ function Navbar() {
                 
 
                 
-                <Link className='nav-link' to='/reviews'>REVIEWS</Link>
+                <Link className='nav-link' to='/recipedetails'>RECIPE-DETAILS</Link>
                
 
                 

@@ -6,6 +6,9 @@ ruby "2.7.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+# AR secure password
+gem 'bcrypt', '~> 3.1.7' 
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -37,7 +40,9 @@ gem "byebug"
   # gem "spring"
 end
 
-gem 'bcrypt'
+# application-c gem
+gem "jwt", "~> 2.5"
+
 
 # gem serializers
 gem 'active_model_serializers'
