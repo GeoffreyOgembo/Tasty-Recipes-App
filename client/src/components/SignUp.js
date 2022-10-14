@@ -27,10 +27,15 @@ function SignUp({ setUser }) {
     });
   }
 
+  const submitHandler = () => {
+    const userObj = {name, email, password};
+    alert(JSON.stringify(userObj));
+}
+
   return (
     <div>
       <form className="frm1" onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1>Sign Up!</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -38,6 +43,15 @@ function SignUp({ setUser }) {
           autoComplete="off"
           value={name}
           onChange={(e) => setName(e.target.value)}
+        /><br></br>
+
+        <label htmlFor="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         /><br></br>
 
 
@@ -49,7 +63,7 @@ function SignUp({ setUser }) {
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         /><br></br>
-            <label htmlFor="password">Password Confirmation</label>
+            <label htmlFor="password">Confirm Password...</label>
         <input
           type="password"
           id="password_confirmation"
@@ -67,7 +81,15 @@ function SignUp({ setUser }) {
           onChange={(e) => setUser_type(e.target.value)}
         /><br></br> */}
 
-        <button type="submit">Sign Up</button>
+        <div className="form-group">
+            <button 
+              onClick={submitHandler}
+              type="button" 
+              className="btn btn-secondary btn-block"
+            >
+              Sign Up!
+            </button>
+        </div>
       </form>
     </div>
   );

@@ -61,3 +61,21 @@ img {
 img:hover {
   transform: scale(1.1);
 }
+
+/* //star-rating styling */
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(246, 12, 12);
+}
+.off {
+  color: #ccc;
+}
+
+body {
+  padding: 100px;
+}

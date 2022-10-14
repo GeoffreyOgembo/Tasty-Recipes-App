@@ -74,7 +74,7 @@ export default function Recipes() {
               alt="#"
                      
             />
-           <StarRating/>
+           <StarRating />
                     </div>
         </div>
       ))}
