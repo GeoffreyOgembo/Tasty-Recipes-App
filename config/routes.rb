@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  post "/signup", to: "users#create"
+  post "/users", to: "users#create"
   # get "/me", to: "users#show"
-  post "/login", to: "sessions#create"
+  post "/users", to: "sessions#create"
   # delete "/logout", to: "sessions#destroy"
   resources :users, only: [:create, :destroy ]
   resources :sessions, only: [ :destroy, :show, :create]
