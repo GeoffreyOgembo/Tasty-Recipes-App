@@ -47,3 +47,6 @@ gem "jwt", "~> 2.5"
 # gem serializers
 gem 'active_model_serializers'
 
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
+end
