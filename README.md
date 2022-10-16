@@ -16,6 +16,9 @@ Tasty Recipes is a simple web-based application where a user has the ability to 
 2. Sign-up and Log-in routes for users.
 3. Recipe container where a user can view, rate, and comment on their favorite recipes. 
 
+# Deployed-Live-Link
+https://morning-waters-93138.herokuapp.com/
+
 # Technologies Used
 1. JavaScript
 2. Bootstrap
