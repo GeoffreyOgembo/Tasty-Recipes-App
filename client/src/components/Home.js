@@ -95,7 +95,7 @@ const Home = ({match}) => {
         <div className="home">
             <h1>Tasty Recipes</h1>
             <img className="home-image" src="https://purepng.com/public/uploads/large/purepng.com-tomato-saladsalad-9415246422565bqud.png" alt="Salad" class="center"/>
-            
+            <h5><em>These meals will make your weeknights way simpler. (And tastier!)</em></h5>
         </div>
     );
 }

@@ -83,7 +83,8 @@ body {
 .home {
   height: 1000px;
   margin-top: 0px;
-  background-color:#613659;
+  background-color: #d16fbf;
+  /* background-color:#613659; */
   border-radius: 20px;
 }
 
@@ -93,6 +94,13 @@ body {
       padding-top: 50px;
       text-align: center;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home > h5 {
+  color: #fff;
+  text-align: center;
+  font-weight: 40;
+  text-shadow: 2px 5px 2px black;
 }
   .home-image {
       height: 600px;

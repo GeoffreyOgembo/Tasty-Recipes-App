@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   post "/users", to: "users#create"
-  # get "/me", to: "users#show"
-  post "/users", to: "sessions#create"
-  # delete "/logout", to: "sessions#destroy"
+  get "/me", to: "users#show"
+  post "/loginner", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
   resources :users, only: [:create, :destroy ]
   resources :sessions, only: [ :destroy, :show, :create]
   get "/users/:id", to: "users#show"
