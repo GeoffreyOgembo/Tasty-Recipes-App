@@ -14,24 +14,28 @@ const RecipeDetails = (recipe) => {
 
   return (
 
-    <div className="recipes">
+  
+      <div className="container">
+        <div className="row">
+      
     {recipes?.map((recipe) => (
-      <div key={recipe.id} className="recipe">
-        <div>
-          <h4>{recipe.title}</h4>
-        </div>
-        <div>
-        
-          <div>
-          <h4>{recipe.description}</h4>
-        </div>
-        <div>
-          <h4>{recipe.ingredients}</h4>
-        </div>
+      <div key={recipe.id} className="col-md-4 card mt-5 mx-3">
+        <div className="card-body">
+          <h5 className="card-title">{recipe.title}</h5>
+          <p className="card-text">{recipe.description}</p>
+         <div className="">
+          <h5>Ingredients</h5>
+         <p className="card-text">{recipe.ingredients}</p>
+         </div>
         </div>
       </div>
+    
+      
+
     ))}
-  </div>
+    </div>
+    </div>
+
                
 );
 };

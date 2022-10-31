@@ -44,12 +44,17 @@ class UsersController < ApplicationController
         end
       
         def show
-          @user = User.find(params[:id])
+          @user = User.find_by(id: session[:user_id])
+          if @user
+            render json: @user
+          else
+            render json: { error: "Not authorized" }, status: :unauthorized
+          end
         end
       
         def create
           @user = User.new(user_params)
-          if @user.save and user.valid?
+          if @user.save and @user.valid?
             session[:user_id] = @user.id
             render 'users/new'
           else
@@ -59,6 +64,8 @@ class UsersController < ApplicationController
       
         private
         def user_params
-          params.require(:user).permit(:name, :password, :password_confirmation)
+          params.require(:user).permit(:name, :email, :password, :password_confirmation, :user_type)
         end
     end
+
+
