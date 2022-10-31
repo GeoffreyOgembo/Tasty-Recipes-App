@@ -28,7 +28,7 @@ function NewRecipe({AddRecipe}) {
             recipe_title: newRecipe.recipe_title,recipe_description: newRecipe.recipe_description,
             recipe_ingredients: newRecipe.recipe_ingredients,image_url: newRecipe.imag_url
         }
-        fetch("https://localhost:300/recipes", {
+        fetch("/recipes", {
             method: "POST",
             headers:{
                 "Content-Type":"application/json"
