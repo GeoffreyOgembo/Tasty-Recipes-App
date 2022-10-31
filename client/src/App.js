@@ -35,15 +35,6 @@ function App() {
     <Route exact path="/" element={<Home/>}></Route>
     <Route exact path="/recipes" element={<Recipe/>}></Route>
     {/* <Route exact path="/reviews" element={<Reviews/>}></Route> */}
-<<<<<<< HEAD
-    <Route exact path="/login" element={<Login/>}></Route>
-    <Route exact path="/signup" element={<SignUp/>}></Route> */
-   </Routes>
-       
-
-    {/* <RecipesContainer/> */}
-    {/* <DeleteRecipe/> */}
-=======
     <Route exact path="/login" element={<Login onLogin={handleLogin}/>}></Route>
     <Route exact path="/signup" element={<SignUp/>}></Route>
     <Route exact path='/recipedetails' element={<RecipeDetails/>}></Route>
@@ -54,7 +45,6 @@ function App() {
 
     
 
->>>>>>> refs/remotes/origin/main
 
     </div>
   );
