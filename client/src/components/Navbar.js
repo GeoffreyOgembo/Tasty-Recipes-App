@@ -3,39 +3,58 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
-     <nav className='navbar navbar-expand-lg navbar-dark bg-warning'>
-        <div className='container-fluid'>
-            <div className='logo'>
-              <Link className='nav-link' to='/'><h2>Tasty Recipes</h2></Link>
-            </div>
-            
-            
-              <ul className="nav justify-content-end">
-              
-                <Link className="nav-link active" aria-current="page"  to='/'>HOME</Link>
-               
-                
-                <Link className='nav-link' to='/recipes'>RECIPES</Link>
-                
-
-                
-                <Link className='nav-link' to='/reviews'>REVIEWS</Link>
-               
-
-                
-                <Link className="nav-link" to='/login'>LOGIN</Link>
-               
-
-                
-                <Link className='nav-link' to='/signup'>SIGN UP</Link>
-               
-              </ul>
-            </div> 
+    <div className='nn'>
+      {/* navbar start */}
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-secondary ">
+     <Link class="navbar-brand" to={'/'}>Tasty Recipes</Link>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 ">
+        <li class="nav-item">
+        <Link className="nav-link active" aria-current="page"  to='/'>HOME</Link>
+        </li>
+        <li class="nav-item">
+        <Link className='nav-link' to='/recipess'>RECIPE</Link>
+        </li>
+        <li class="nav-item">
+        <Link className='nav-link' to='/recipedetailss'>RECIPE-DETAILS</Link>
+        </li>
         
-    </nav>
-    
+        <li class="nav-item">
+        <Link className="nav-link" to='/login'>LOGIN</Link>
+        </li>
+        <li class="nav-item">
+        <Link className='nav-link' to='/signup'>SIGN UP</Link>
+        </li>
+        <li class="nav-item">
+        <Link className='nav-link' to='/logout'>LOG OUT</Link>
+        </li>
+        
+        
+        
+        
+      </ul>
+      
     </div>
+</nav>
+      {/* navbar end */}
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   )
 }
 

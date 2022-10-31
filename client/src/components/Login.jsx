@@ -1,50 +1,85 @@
-
 import React, { useState } from "react";
-function Login({ setUser }) {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+import {useNavigate} from 'react-router-dom';
+function Login({onLogin}) {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  // const [user, setUser] = useState({
+    
+  //   email: "",
+  //   password: "",
+  // })
+  const handleInput = (e) => {
+    const {id, value} =e.target;
+    if(id === "email"){
+      setEmail(value);
+    }
+    if(id === "password"){
+      setPassword(value);
+    }
+  }
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login", {
+    fetch("/loginner", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, password }),
+      body: JSON.stringify({
+        email,
+        password
+         })
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        r.json().then((user) => onLogin(user));
       }
-    });
+    
+      navigate("/recipes")
+      } )
   }
   return (
-    <div className="container">
-      <div className ="row">
-      <div className ="col-md-4"></div>
-      <div className ="col-md-4"></div>
-      <form onSubmit={handleSubmit}>
-        
-        <label htmlFor="name">name</label>
+  <div>
+      <form className="frm1" onSubmit={handleSubmit}>
+        <h1>Tasty Recipe Login</h1>
+        {/* <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
           autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
+          value={user.name}
+          name="name"
+          onChange={(e) => setUser({
+      ...user,
+      [e.target.name]: e.target.value
+    })}/> */}
+      <label htmlFor="email">Email</label>
         <input
-          type="password"
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          name="email"
+          onChange={(e) => handleInput(e)}/>
+<label htmlFor="password">password</label>
+        <input
+          type="text"
           id="password"
-          autoComplete="current-password"
+          autoComplete="off"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
+          name="password"
+          onChange={(e) => handleInput(e)}/>
+        <div className="form-group">
+            <button
+              onClick={handleSubmit}
+              type="button"
+              className="btn btn-primary btn-block"
+            >
+              Log In!
+            </button>
+        </div>
       </form>
-    </div>
     </div>
   );
 }
 export default Login;
-
